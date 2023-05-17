@@ -2,7 +2,10 @@ import { FC } from 'react';
 import { Editor } from '@tiptap/react';
 import DropdownOptions from '@/components/common/DropdownOptions';
 import { AiFillCaretDown } from 'react-icons/ai';
+import { RiDoubleQuotesL } from 'react-icons/ri';
+import { BsBraces, BsCode, BsImageFill, BsLink45Deg, BsListOl, BsListUl, BsTypeBold, BsTypeItalic, BsTypeStrikethrough, BsTypeUnderline, BsYoutube } from 'react-icons/bs';
 import { getFocusedEditor } from '../EditorUtils';
+import Button from './Button';
 
 interface Props {
     editor: Editor | null;
@@ -35,13 +38,56 @@ const ToolBar: FC<Props> = ({ editor }): JSX.Element | null => {
         )
     }
     return (
-        <div>
-            {
-                <DropdownOptions
-                    options={options}
-                    head={<Head />}
-                />
-            }
+        <div className='flex items-center'>
+            <DropdownOptions
+                options={options}
+                head={<Head />}
+            />
+            <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-8" />
+            <div className="flex items-center space-x-3">
+                <Button>
+                    <BsTypeBold />
+                </Button>
+                <Button>
+                    <BsTypeItalic />
+                </Button>
+                <Button>
+                    <BsTypeUnderline />
+                </Button>
+                <Button>
+                    <BsTypeStrikethrough />
+                </Button>
+            </div>
+            <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-8" />
+            <div className="flex items-center space-x-3">
+                <Button>
+                    <RiDoubleQuotesL />
+                </Button>
+                <Button>
+                    <BsCode />
+                </Button>
+                <Button>
+                    <BsBraces />
+                </Button>
+                <Button>
+                    <BsLink45Deg />
+                </Button>
+                <Button>
+                    <BsListOl />
+                </Button>
+                <Button>
+                    <BsListUl />
+                </Button>
+            </div>
+            <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-8" />
+            <div className="flex items-center space-x-3">
+                <Button>
+                    <BsYoutube />
+                </Button>
+                <Button>
+                    <BsImageFill />
+                </Button>
+            </div>
         </div>
     )
 };
