@@ -5,6 +5,9 @@ export const getFocusedEditor = (editor: Editor) => {
 };
 
 export const validateUrl = (url: string) => {
+    // undefined면 안되게
+    if (!url.trim()) return '';
+
     let finalUrl;
 
     try {
