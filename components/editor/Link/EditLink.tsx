@@ -12,7 +12,7 @@ const EditLink: FC<Props> = ({ editor }): JSX.Element => {
   const [showEditForm, setShowEditForm] = useState(false);
 
   const handleOnLinkOpenClick = useCallback(() => {
-    const { href } = editor.getAttributes('link');
+    const { href } = editor.getAttributes("link");
     if (href) {
       window.open(href, "_blank");
     }
@@ -34,24 +34,21 @@ const EditLink: FC<Props> = ({ editor }): JSX.Element => {
       .setLink({ href: url, target: openInNewTab ? "_blank" : "" })
       .run();
     setShowEditForm(false);
-  }
+  };
 
   const getInitialState = useCallback(() => {
-    const { href, target } = editor.getAttributes('link');
-    return { url: href, openInNewTab: target ? true : false }
+    const { href, target } = editor.getAttributes("link");
+    return { url: href, openInNewTab: target ? true : false };
   }, [editor]);
 
   return (
     <BubbleMenu
-      shouldShow={({ editor }) => {
-        // link 걸려있을 때만 보이게
-        return editor.isActive('link')
-      }}
+      shouldShow={({ editor }) => editor.isActive("link")}
       editor={editor}
       tippyOptions={{
         onHide: () => {
           setShowEditForm(false);
-        }
+        },
       }}
     >
       <LinkForm
@@ -59,8 +56,7 @@ const EditLink: FC<Props> = ({ editor }): JSX.Element => {
         onSubmit={handleSubmit}
         initialState={getInitialState()}
       />
-      {
-        !showEditForm &&
+      {!showEditForm && (
         <div className="rounded bg-primary dark:bg-primary-dark text-primary-dark dark:text-primary shadow-secondary-dark shadow-md p-3 flex items-center space-x-6 z-50">
           <button onClick={handleOnLinkOpenClick}>
             <BsBoxArrowUpRight />
@@ -73,7 +69,8 @@ const EditLink: FC<Props> = ({ editor }): JSX.Element => {
           <button onClick={handleUnlinkClick}>
             <BiUnlink />
           </button>
-        </div>}
+        </div>
+      )}
     </BubbleMenu>
   );
 };
