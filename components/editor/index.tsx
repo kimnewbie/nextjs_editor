@@ -65,7 +65,11 @@ const Editor: FC<Props> = (props): JSX.Element => {
                 {editor ? <EditLink editor={editor} /> : null}
                 <EditorContent editor={editor} />
             </div>
-            <GalleryModal visible={showGallery} onClose={() => setShowGallery} />
+            <GalleryModal
+                visible={showGallery}
+                onClose={() => setShowGallery}
+                onSelect={(result) => console.log(result)}
+            />
         </>
     )
 };
