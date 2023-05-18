@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      HOME
+    <div className='text-center text-lg'>
+      <Link href='/admin/posts'>
+        [click] Go to posts
+      </Link>
     </div>
   )
 }

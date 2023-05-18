@@ -3,7 +3,7 @@ import { Editor } from '@tiptap/react';
 import DropdownOptions from '@/components/common/DropdownOptions';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { RiDoubleQuotesL } from 'react-icons/ri';
-import { BsBraces, BsCode, BsImageFill, BsLink45Deg, BsListOl, BsListUl, BsTypeBold, BsTypeItalic, BsTypeStrikethrough, BsTypeUnderline, BsYoutube } from 'react-icons/bs';
+import { BsBraces, BsCode, BsImageFill, BsListOl, BsListUl, BsTypeBold, BsTypeItalic, BsTypeStrikethrough, BsTypeUnderline, BsYoutube } from 'react-icons/bs';
 import { getFocusedEditor } from '../EditorUtils';
 import Button from './Button';
 import InsertLink from '../Link/InsertLink';
@@ -12,9 +12,10 @@ import EmbedYoutube from './EmbedYoutube';
 
 interface Props {
     editor: Editor | null;
+    onOpenImageClick?(): void
 }
 
-const ToolBar: FC<Props> = ({ editor }): JSX.Element | null => {
+const ToolBar: FC<Props> = ({ editor, onOpenImageClick }): JSX.Element | null => {
     if (!editor) return null;
 
     const options = [
@@ -99,7 +100,7 @@ const ToolBar: FC<Props> = ({ editor }): JSX.Element | null => {
             <div className="h-4 w-[1px] bg-secondary-dark dark:bg-secondary-light mx-8" />
             <div className="flex items-center space-x-3">
                 <EmbedYoutube onSubmit={handleEmbedYoutube} />
-                <Button>
+                <Button onClick={onOpenImageClick}>
                     <BsImageFill />
                 </Button>
             </div>
