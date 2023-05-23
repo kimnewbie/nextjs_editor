@@ -1,0 +1,42 @@
+{
+  "electronics": [
+    {
+      "title": "Computer accessories",
+      "subtitle": "Reviews for computer accessories",
+      "slug": "computer-accessories",
+      "thumbnail": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGvufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "furniture": [
+    {
+      "title": "Computer accessories",
+      "subtitle": "Reviews for computer accessories",
+      "slug": "computer-accessories",
+      "thumbnail": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGvufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "books": [
+    {
+      "title": "Computer accessories",
+      "subtitle": "Reviews for computer accessories",
+      "slug": "computer-accessories",
+      "thumbnail": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGvufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "kitchen": [
+    {
+      "title": "Computer accessories",
+      "subtitle": "Reviews for computer accessories",
+      "slug": "computer-accessories",
+      "thumbnail": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGvufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "Apparel": [
+    {
+      "title": "Computer accessories",
+      "subtitle": "Reviews for computer accessories",
+      "slug": "computer-accessories",
+      "thumbnail": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGvufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}
