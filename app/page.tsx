@@ -1,8 +1,9 @@
-import styles from './page.module.css'
+import { NextPage } from "next";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-    </main>
-  )
-}
+interface Props {}
+
+const Home: NextPage<Props> = () => {
+  return <div>Home page</div>;
+};
+
+export default Home;

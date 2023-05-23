@@ -1,14 +1,13 @@
-import style from './contact.module.css';
-
+import style from "./contact.module.css";
 export default function ContactLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <>
-            <h1 className={style.title}>I am root layout</h1>
-            {children}
-        </>
-    )
+  return (
+    <>
+      <h1 className={style.title}>I am root layout</h1>
+      {children}
+    </>
+  );
 }
