@@ -1,13 +1,21 @@
-import Editor from '@/components/editor';
-import { NextPage } from 'next';
+import { NextPage } from "next";
+import Editor from "../../../components/editor";
+import AdminLayout from "../../../components/layout/AdminLayout";
 
-interface Props { }
+interface Props {}
 
 const Create: NextPage<Props> = () => {
-    return (
-        <div className="max-w-4xl mx-auto">
-            <Editor />
-        </div>)
+  return (
+    <AdminLayout title="New Post">
+      <div className="max-w-4xl mx-auto">
+        <Editor
+          onSubmit={(post) => {
+            console.log(post);
+          }}
+        />
+      </div>
+    </AdminLayout>
+  );
 };
 
 export default Create;
